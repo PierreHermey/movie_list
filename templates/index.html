@@ -20,7 +20,7 @@
         <!-- Menu -->
         <ul class="vertical menu">
             {%for movie in movies %}
-            <li><a href="index.php?page=detail&id={{ movie['id'] }}">{{ movie['title'] }}</a></li>
+            <li><a href="detail/{{ movie['id'] }}">{{ movie['title'] }}</a></li>
             {%endfor%}
         </ul>
     </div>
@@ -42,11 +42,11 @@
                         <figcaption>
                             <h2>{{movie['title']}}</h2>
                         </figcaption>
-                        <a href="index.php?page=detail&id={{ movie['id'] }}"></a>
+                        <a href="detail/{{ movie['id'] }}"></a>
                     </figure>
                     <div class="card">
                         <div class="card-section">
-                            <a class="float-right subtitle" href="index.php?page=detail&id={{ movie['id'] }}">Détails...</a>
+                            <a class="float-right subtitle" href="detail/{{ movie['id'] }}">Détails...</a>
                         </div>
                     </div>         
                 </div>
