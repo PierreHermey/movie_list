@@ -1,20 +1,18 @@
 <?php
 
 function getAllMovies() {
-     // requete
-     $dsn = 'mysql:host=localhost;dbname=movies;port=3306;charset=utf8';
-     $pdo = new PDO($dsn, 'psaulay' , '');
-     $query = $pdo->query("SELECT * FROM `movie`");
-     $resultat = $query->fetchAll();
-     return $resultat;
+    // requete
+    include "model.php";
+    $query = $bdd->query("SELECT * FROM `movie`");
+    $resultat = $query->fetchAll();
+    return $resultat;
 }
 
 function getMovie($id) {
-     $dsn = 'mysql:host=localhost;dbname=movies;port=3306;charset=utf8';
-     $pdo = new PDO($dsn, 'psaulay' , '');
-     $query = $pdo->query("SELECT * FROM `movie` WHERE id = ".$id);
-     $resultat = $query->fetch();
-     return $resultat;
+    include "model.php";
+    $query = $bdd->query("SELECT * FROM `movie` WHERE id = ".$id);
+    $resultat = $query->fetch();
+    return $resultat;
 }
 
 function getActor($id) {
