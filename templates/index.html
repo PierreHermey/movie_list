@@ -38,33 +38,40 @@
             <div class="title">WHAT IS <br>THIS MOVIE ?</div>
             <div class="subtitle">Discover them</div>
         </div>
-        
-        <div class="grid-container">
-            <div class="grid-x grid-padding-x medium-up-3">
-                {%for movie in movies %}
-                <div class="cell">
-                    <figure class="snip1104"><img src="img/{{ movie['title'] }}.jpg">
-                        <figcaption>
-                            <h2>{{movie['title']}}</h2>
-                        </figcaption>
-                        <a href="detail/{{ movie['id'] }}"></a>
-                    </figure>
-                    <div class="card">
-                        <div class="card-section">
-                            <a class="float-right subtitle" href="detail/{{ movie['id'] }}">Détails...</a>
-                        </div>
-                    </div>         
+        <div class="off-canvas-content" data-off-canvas-content>
+            <button class="hollow button alert" type="button" data-open="offCanvas">
+                <span class="show-for-sr">Open List</span>
+                <span aria-hidden="true"><i class="fas fa-clipboard-list"></i></span>
+            </button>
+            <div class="container">
+                <div class="title">WHAT IS <br>THIS MOVIE ?</div>
+                <div class="subtitle">Discover them</div>
+            </div>
+            <div class="grid-container">
+                <div class="grid-x grid-padding-x medium-up-3">
+                    {%for movie in movies %}
+                    <div class="cell">
+                        <figure class="snip1104"><img src="img/{{ movie['title'] }}.jpg">
+                            <figcaption>
+                                <h2>{{movie['title']}}</h2>
+                            </figcaption>
+                            <a href="detail/{{ movie['id'] }}"></a>
+                        </figure>
+                        <div class="card">
+                            <div class="card-section">
+                                <a class="float-right subtitle" href="detail/{{ movie['id'] }}">Détails...</a>
+                            </div>
+                        </div>         
+                    </div>
+                    {%endfor%}       
                 </div>
-                {%endfor%}       
             </div>
         </div>
-    </div>
-    
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.4.3/dist/js/foundation.min.js" integrity="sha256-mRYlCu5EG+ouD07WxLF8v4ZAZYCA6WrmdIXyn1Bv9Vk= sha384-KzKofw4qqetd3kvuQ5AdapWPqV1ZI+CnfyfEwZQgPk8poOLWaabfgJOfmW7uI+AV sha512-0gHfaMkY+Do568TgjJC2iMAV0dQlY4NqbeZ4pr9lVUTXQzKu8qceyd6wg/3Uql9qA2+3X5NHv3IMb05wb387rA==" crossorigin="anonymous"></script>
-    <script src="css/script.js"></script>
-    <script>
-        $(document).foundation();
-    </script>
-</body>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.4.3/dist/js/foundation.min.js" integrity="sha256-mRYlCu5EG+ouD07WxLF8v4ZAZYCA6WrmdIXyn1Bv9Vk= sha384-KzKofw4qqetd3kvuQ5AdapWPqV1ZI+CnfyfEwZQgPk8poOLWaabfgJOfmW7uI+AV sha512-0gHfaMkY+Do568TgjJC2iMAV0dQlY4NqbeZ4pr9lVUTXQzKu8qceyd6wg/3Uql9qA2+3X5NHv3IMb05wb387rA==" crossorigin="anonymous"></script>
+        <script src="css/script.js"></script>
+        <script>
+            $(document).foundation();
+        </script>
+    </body>
 </html>   
