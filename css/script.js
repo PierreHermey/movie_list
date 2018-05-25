@@ -2,8 +2,8 @@
 
 $(document).ready(function(){
     var mouseX, mouseY;
-    var ww = $( window ).width();
-    var wh = $( window ).height();
+    //var ww = $( window ).width();
+    //var wh = $( window ).height();
     var traX, traY;
     $(document).mousemove(function(e){
         mouseX = e.pageX;
