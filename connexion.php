@@ -24,7 +24,7 @@ try{
     if ($submit_login == $login && $submit_password == $mdp){
       echo '<a href="../movies/upload_form">ici</a>';
     }else{
-     echo "nique ta mere";
+     echo "les identifiants renseignés sont incorrecte";
     }
 
 ?>
