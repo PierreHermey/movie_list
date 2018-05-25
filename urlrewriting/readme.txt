@@ -10,3 +10,5 @@ dans /etc/apache2/apache2.conf changer :
 
 commande : sudo a2enmod rewrite
 
+ajouter le fichier .htaccess à la racine du projet 
+
