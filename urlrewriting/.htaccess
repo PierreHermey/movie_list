@@ -1,0 +1,5 @@
+Options +FollowSymlinks
+RewriteEngine On
+RewriteRule ^home$ index.php/?page=home [L]
+RewriteRule ^$ index.php/?page=home [L]
+RewriteRule ^detail/(\d+)$ index.php?page=detail&id=$1 [L]

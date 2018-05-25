@@ -149,3 +149,31 @@ figure.snip1104.hover:before {
     -webkit-transform: rotate(110deg) translateY(-150%);
     transform: rotate(110deg) translateY(-150%);
 }
+
+.other-page{
+    height: 800px;
+    width: 650px;
+}
+
+#page-container{
+border: 1px solid #d5d8dc;
+background-color: #ffffff;
+margin: auto;
+width: 85%;
+margin-top: 30px;
+}
+
+.info{
+    width: 800px;
+    padding-left: 50px;
+}
+
+.info > p 
+{
+    color: 	#606060;
+}
+
+.info > ul > li
+{
+    color: 	#606060;
+}
