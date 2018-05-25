@@ -14,7 +14,6 @@
 </head>
 
 <body> 
-    
     <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
         <ul class="vertical menu accueil">
             <li><a href="../home"><i class="fas fa-home"></i> Accueil</a></li>
@@ -26,7 +25,7 @@
         <!-- Menu -->
         <ul class="vertical menu">
             {%for movie in movies %}
-            <li><a href="detail/{{ movie['id'] }}"> ↳ {{ movie['title'] }}</a></li>
+            <li><a href="../detail/{{ movie['id'] }}"> ↳ {{ movie['title'] }}</a></li>
             {%endfor%}
         </ul>
     </div>
