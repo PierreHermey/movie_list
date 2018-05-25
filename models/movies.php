@@ -33,7 +33,7 @@ function getDirector($id) {
     include "model.php";
     $director = $bdd->prepare('SELECT * FROM director INNER JOIN movie_director ON movie_director.director_id = director.id WHERE movie_director.movie_id = '.$id);
     $director->execute();
-    $directorAnswer = $director->fetch();
+    $directorAnswer = $director->fetchAll();
     return $directorAnswer;
 }
 ?>

@@ -15,6 +15,7 @@ function indexPage() {
 }
 
 function detailPage($id) {
+    $films = getAllMovies();
     $film = getMovie($id);
     $actor = getActor($id);
     $director = getDirector($id);
@@ -28,6 +29,7 @@ function detailPage($id) {
     
     echo $twig->render('detail.html', array(
         'movie' => $film,
+        'movies' => $films,
         'director' => $director,
         'actor' => $actor,
         'gender' => $gender,
