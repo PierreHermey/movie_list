@@ -40,7 +40,9 @@
             </div>
             <div class="media-object-section">
                 <h2>{{ movie['title'] }} </h2>
+
                 <iframe width="560" height="315" src="{{ movie['trailer']}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
                 <div class="info">
                     <p>{{ movie['year'] }}</p>
                     
@@ -61,12 +63,14 @@
                     {% for gender in gender %}
                     <p>{{ gender['gender'] }}</p>
                     {% endfor %}
+
                     <h4>Durée du film</h4>
                     <p>{{ api['Runtime'] }}</p>
                     <h4>Note du publique</h4>
                     <p>{{ api['Ratings']['0']['Value'] }}</p>
                     <h4>Pays d'origine</h4>
                     <p>{{ api['Country'] }}</p>
+
                 </div>
             </div>
         </div>

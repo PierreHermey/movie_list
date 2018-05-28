@@ -38,6 +38,7 @@ function getDirector($id) {
     $directorAnswer = $director->fetchAll();
     return $directorAnswer;
 }
+
 function getApiInfos($title){
     $api_url = "http://www.omdbapi.com/?t=".$title."&apikey=cc1bb70";
     $api_content = file_get_contents($api_url);

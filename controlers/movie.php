@@ -14,6 +14,7 @@ function indexPage() {
     ));
 }
 
+
 function detailPage($id, $title) {
     $films = getAllMovies();
     $film = getMovie($id);
