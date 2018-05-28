@@ -80,7 +80,7 @@ margin-top: 30px;
     -ms-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
     left:50%;
-    top:80px;
+    top:120px;
 }
 .title{
     font-weight: 800;
@@ -101,6 +101,7 @@ margin-top: 30px;
     text-transform: uppercase;
     padding-top:10px;
     color: white;
+    margin-bottom: 20px;
 }
 
 /* image hover */

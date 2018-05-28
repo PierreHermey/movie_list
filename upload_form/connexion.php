@@ -1,11 +1,6 @@
 <?php    
 
-try{
-        $bdd = new PDO('mysql:host=localhost;dbname=movies;charset=utf8', 'psaulay', '');
-      }
-      catch (Exception $e){
-        die('Erreur : ' . $e->getMessage());
-      }
+    require "../model.php";
       
       
     $reponse_login = $bdd->prepare('SELECT login FROM connexion'); 
@@ -22,9 +17,9 @@ try{
     $submit_password = $_POST['mdp'];
       
     if ($submit_login == $login && $submit_password == $mdp){
-      echo '<a href="../movies/upload_form">ici</a>';
+      header('Location: index.html'); 
     }else{
-     echo "nique ta mere";
+      echo "<p>Les identifiants entrés sont incorrect !";
     }
 
 ?>
