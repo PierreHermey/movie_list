@@ -31,6 +31,7 @@
                         
                         $movie = $bdd->prepare("INSERT INTO movie(title, description, year) VALUES('$title', '$description', '$year')");
                         $movie->execute();
+                        //echo '<pre>'; var_dump($movie); echo '</pre>'; die();
                         $movie_request = $bdd->prepare("SELECT max(id) FROM movie");
                         $movie_request->execute();
                         $movie_id = $movie_request->fetchAll();

@@ -19,7 +19,7 @@
     if ($submit_login == $login && $submit_password == $mdp){
       header('Location: index.html'); 
     }else{
-      echo "<p>Les identifiants entrés sont incorrect !";
+    echo "les identifiants renseignés sont incorrecte";
     }
 
 ?>
