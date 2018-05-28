@@ -9,7 +9,7 @@
     if(isset($_POST['submit'])){
         $title = $_POST['title'];
         $year = $_POST['year'];
-        $description = $_POST['description'];
+        $description = addslashes($_POST['description']);
         $director_firstname = $_POST['director_firstname'];
         $director_lastname = $_POST['director_lastname'];
         $actor_firstname = $_POST['actor_firstname'];
@@ -66,7 +66,7 @@
                         $movie_director->execute();
                         $movie_gender = $bdd->prepare("INSERT INTO movie_gender(movie_id, gender_id) VALUES('$movie_id', '$gender_id')");
                         $movie_gender->execute();
-
+                        
                         echo 'Film uploaded successfully';
 
                     }

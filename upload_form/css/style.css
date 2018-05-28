@@ -17,11 +17,6 @@ hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padd
 input,select{vertical-align:middle}
 li{list-style:none}
 
-
-/* =============================================================================
-  My CSS
-   ========================================================================== */
-
 /* ---- base ---- */
 
 html,body{ 
@@ -40,7 +35,6 @@ body{
 
 canvas{
   display:block;
-  vertical-align:bottom;
 } 
 
 /* ---- particles.js container ---- */
@@ -90,7 +84,7 @@ input[type="password"]{
 }
 
 .form-container input[type="submit"]{
-  width: 30%;
+  width: 40%;
   margin: auto;
   display:flex;
   margin-top: 15px;
