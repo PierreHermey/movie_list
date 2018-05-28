@@ -1,5 +1,6 @@
 <?php 
     try{
+
         $bdd = new PDO('mysql:host=localhost;dbname=DB_Movie;charset=utf8', 'root', 'root');
       }
       catch (Exception $e){
@@ -9,12 +10,13 @@
     if(isset($_POST['submit'])){
         $title = $_POST['title'];
         $year = $_POST['year'];
-        $description = $_POST['description'];
+        $description = addslashes($_POST['description']);
         $director_firstname = $_POST['director_firstname'];
         $director_lastname = $_POST['director_lastname'];
         $actor_firstname = $_POST['actor_firstname'];
         $actor_lastname = $_POST['actor_lastname'];
         $gender = $_POST['gender'];
+
         $location = '/home/stagiaire/projets/movieFinal/What-is-this-movie-master/img/';
         $name       = $title.'.jpg';  
         $temp_name  = $_FILES['uploaded_file']['tmp_name'];  
@@ -23,14 +25,18 @@
         $filename = $_FILES['uploaded_file']['name'];
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
+
         if($imageFileType != "jpg" &&  $imageFileType != "jpeg"  ){
             echo "Sorry, only JPG, JPEG files are allowed.";
         }else{
             if(isset($name)){
-                if(!empty($name)){            
+                if(!empty($name)){     
                     if(move_uploaded_file($temp_name, $location.$name)){
+                        
                         $movie = $bdd->prepare("INSERT INTO movie(title, description, year) VALUES('$title', '$description', '$year')");
                         $movie->execute();
+                        //echo '<pre>'; var_dump($movie); echo '</pre>'; die();
+
                         $movie_request = $bdd->prepare("SELECT max(id) FROM movie");
                         $movie_request->execute();
                         $movie_id = $movie_request->fetchAll();

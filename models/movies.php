@@ -39,4 +39,12 @@ function getDirector($id) {
     return $directorAnswer;
 }
 
+function getApiInfos($title){
+    $api_url = "http://www.omdbapi.com/?t=".$title."&apikey=cc1bb70";
+    $api_content = file_get_contents($api_url);
+    $api_content_array = json_decode($api_content, true);
+    return $api_content_array;
+    //$api_content_array = $api_content_array['Runtime'];
+}
+
 ?>

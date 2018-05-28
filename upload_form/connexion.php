@@ -1,11 +1,6 @@
 <?php    
 
-try{
-        $bdd = new PDO('mysql:host=localhost;dbname=DB_Movie;charset=utf8', 'root', 'root');
-      }
-      catch (Exception $e){
-        die('Erreur : ' . $e->getMessage());
-      }
+    require "../model.php";
       
       
     $reponse_login = $bdd->prepare('SELECT login FROM connexion'); 
@@ -22,9 +17,9 @@ try{
     $submit_password = $_POST['mdp'];
       
     if ($submit_login == $login && $submit_password == $mdp){
-      echo '<a href="../What-is-this-movie-master/upload_form">ici</a>';
+      header('Location: index.html'); 
     }else{
-     echo "les identifiants renseignés sont incorrecte";
+    echo "les identifiants renseignés sont incorrecte";
     }
 
 ?>
