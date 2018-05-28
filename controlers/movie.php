@@ -14,13 +14,14 @@ function indexPage() {
     ));
 }
 
-function detailPage($id) {
+function detailPage($id, $title) {
     $films = getAllMovies();
     $film = getMovie($id);
     $films = getAllMovies();
     $actor = getActor($id);
     $director = getDirector($id);
     $gender = getGender($id);
+    $api = getApiInfos($title);
     
     $loader = new Twig_Loader_Filesystem('templates');
     $twig = new Twig_Environment($loader, array(
@@ -34,8 +35,7 @@ function detailPage($id) {
         'director' => $director,
         'actor' => $actor,
         'gender' => $gender,
-        
+        'api'=> $api,
     ));
 }
-
 ?>     
